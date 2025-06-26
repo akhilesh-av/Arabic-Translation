@@ -7,9 +7,11 @@ from difflib import SequenceMatcher
 import numpy as np
 import warnings
 import time
+import os
 
 # Suppress warnings
 warnings.filterwarnings("ignore")
+GEMINAI_KEY = os.getenv("GEMINAI_KEY")
 
 class ArabicTranslationEvaluator:
     def __init__(self, gemini_api_key):
@@ -187,9 +189,9 @@ if __name__ == "__main__":
         # Initialize with your Gemini API key
         print("Initializing translation system...")
         start_time = time.time()
-        
+
         # Replace with your actual Gemini API key
-        evaluator = ArabicTranslationEvaluator("AIzaSyCpDBj-V3T3DUEey03SmGmAgONnTGN_tEs")
+        evaluator = ArabicTranslationEvaluator("GEMINAI_KEY")
         
         print(f"System initialized in {time.time() - start_time:.2f} seconds")
         
